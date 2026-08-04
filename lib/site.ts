@@ -13,7 +13,7 @@ export const site = {
   wordmarkSub: "Technology Solutions",
 
   /** Update this to your live domain before deploying. */
-  url: "ostrobtechnology.netlify.app",
+  url: "https://ostrobtechnology.netlify.app",
 
   email: "info@ostrobengineering.co.za",
   phoneDisplay: "060 971 8637",
