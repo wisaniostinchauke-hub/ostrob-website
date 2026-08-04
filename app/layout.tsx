@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   title: {
     default: `${site.name} — Websites, Apps & AI Automation | South Africa`,
     template: `%s | ${site.name}`,
-    
   },
   description: site.description,
   keywords: [
@@ -58,21 +57,14 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   category: "technology",
+  // Add the verification meta tag here:
+  other: {
+    "google-site-verification": "Np8jGLbIvJY1BSszN_Y_GkCEqJka95uLhnPNoGEbelY",
+  },
 };
 
 /**
  * Structured data.
- *
- * Answer engines lean on markup to decide what a page is actually about, so this
- * ships three linked graph nodes rather than one blob:
- *
- *   Organization  — who we are, reused by @id from the other nodes
- *   WebSite       — the site itself, carrying the freshness signal
- *   FAQPage       — the question/answer pairs, generated from lib/faqs.ts
- *
- * The offer prices are generated from lib/pricing.ts, the same file the pricing
- * section renders from, so the numbers a machine reads and the numbers a human
- * reads cannot drift apart.
  */
 const lastReviewed = new Date().toISOString().split("T")[0];
 
@@ -193,5 +185,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-<meta name="google-site-verification" content="Np8jGLbIvJY1BSszN_Y_GkCEqJka95uLhnPNoGEbelY" />
 }
