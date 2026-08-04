@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   title: {
     default: `${site.name} — Websites, Apps & AI Automation | South Africa`,
     template: `%s | ${site.name}`,
+    
   },
   description: site.description,
   keywords: [
@@ -192,4 +193,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+}<meta name="google-site-verification" content="Np8jGLbIvJY1BSszN_Y_GkCEqJka95uLhnPNoGEbelY" />
