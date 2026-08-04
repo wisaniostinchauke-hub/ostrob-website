@@ -193,4 +193,5 @@ export default function RootLayout({
       </body>
     </html>
   );
-}<meta name="google-site-verification" content="Np8jGLbIvJY1BSszN_Y_GkCEqJka95uLhnPNoGEbelY" />
+<meta name="google-site-verification" content="Np8jGLbIvJY1BSszN_Y_GkCEqJka95uLhnPNoGEbelY" />
+}
