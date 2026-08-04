@@ -1,16 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    // Keeps your project root correctly assigned for Turbopack
+    root: __dirname,
+  },
+  // Allows Next.js to route the form submission directly to Netlify
+  async rewrites() {
+    return [
+      {
+        source: "/__forms.html",
+        destination: "/__forms.html",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
-// next.config.js
-const path = require('path')
-
-module.exports = {
-  turbopack: {
-    // This tells Turbopack to strictly look inside your project folder
-    root: __dirname, 
-  },
-}
