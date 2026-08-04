@@ -1,0 +1,27 @@
+# Netlify deployment configuration for Ostrob Technology Solutions
+#
+# The Next.js runtime plugin handles the build output automatically — you do not
+# need to set a publish directory manually.
+
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Security headers. Adjust CSP only if you add third-party scripts later.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/og.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
